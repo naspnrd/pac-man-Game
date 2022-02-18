@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 28
     let score = 0
     const grid = document.querySelector('.grid')
+    let ghosts;
     const layout = [
       1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
       1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //create your board
   function createBoard() {
+      console.log("entering in board....")
     for (let i = 0; i < layout.length; i++) {
       const square = document.createElement('div')
       grid.appendChild(square)
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+  console.log("calling create board method ....")
   createBoard()
 
   //create Characters
